@@ -2,12 +2,13 @@ import React, {useState, useContext} from 'react';
 import {Platform} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {AuthContext} from '../../contexts/auth';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import {
   Background,
   Container,
-  Logo,
   AreaInput,
   Input,
+  AreaButton,
   SubmitButton,
   SubmitText,
   BackButton,
@@ -29,6 +30,11 @@ export default function SignUp() {
     <Background>
       <Container behavior={Platform.OS === 'ios' ? 'padding' : ''} enabled>
         <BackButton onPress={() => navigation.goBack()}>
+          <Ionicons
+            name="arrow-back-outline"
+            size={16}
+            color="rgba(198, 44, 54, 0.7)"
+          />
           <BackText>Voltar</BackText>
         </BackButton>
 
@@ -61,10 +67,11 @@ export default function SignUp() {
             onChangeText={text => setPassword(text)}
           />
         </AreaInput>
-
-        <SubmitButton onPress={handleSignUp}>
-          <SubmitText>Cadastrar</SubmitText>
-        </SubmitButton>
+        <AreaButton>
+          <SubmitButton onPress={handleSignUp}>
+            <SubmitText>Cadastrar</SubmitText>
+          </SubmitButton>
+        </AreaButton>
       </Container>
     </Background>
   );

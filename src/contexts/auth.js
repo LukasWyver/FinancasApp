@@ -8,6 +8,7 @@ function AuthProvider({children}) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  // carrega os dados do último login.
   useEffect(() => {
     async function loadStorage() {
       const storageUser = await AsyncStorage.getItem('Auth_user');
@@ -21,7 +22,7 @@ function AuthProvider({children}) {
     loadStorage();
   }, []);
 
-  //funcao para logar usuario.
+  // funcao para logar usuario.
   async function signIn(email, password) {
     await firebase
       .auth()
@@ -78,14 +79,22 @@ function AuthProvider({children}) {
       });
   }
 
-  //salvar os dados do último login
+  // salvar os dados do último login
   async function storageUser(data) {
     await AsyncStorage.setItem('Auth_user', JSON.stringify(data));
   }
 
+  // efetuar a saida do usuario logado.
+  async function signOut() {
+    await firebase.auth().signOut();
+    await AsyncStorage.clear().then(() => {
+      setUser(null);
+    });
+  }
+
   return (
     <AuthContext.Provider
-      value={{signed: !!user, user, signUp, signIn, loading}}>
+      value={{signed: !!user, user, signUp, signIn, signOut, loading}}>
       {children}
     </AuthContext.Provider>
   );

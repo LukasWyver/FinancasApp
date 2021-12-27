@@ -12,6 +12,7 @@ import {
   SubmitText,
   Link,
   LinkText,
+  AreaButton,
 } from './styles';
 
 export default function SignIn() {
@@ -27,7 +28,7 @@ export default function SignIn() {
   return (
     <Background>
       <Container behavior={Platform.OS === 'ios' ? 'padding' : ''} enabled>
-        <Logo source={require('../../assets/Wallet.png')} />
+        <Logo source={require('../../assets/iwalletsmall.png')} />
 
         <AreaInput>
           <Input
@@ -49,9 +50,11 @@ export default function SignIn() {
           />
         </AreaInput>
 
-        <SubmitButton onPress={handleLogin}>
-          <SubmitText>Acessar</SubmitText>
-        </SubmitButton>
+        <AreaButton>
+          <SubmitButton onPress={handleLogin}>
+            <SubmitText>Acessar</SubmitText>
+          </SubmitButton>
+        </AreaButton>
 
         <Link onPress={() => navigation.navigate('SignUp')}>
           <LinkText>Criar uma conta</LinkText>
