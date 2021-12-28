@@ -7,7 +7,7 @@ export const Container = styled.View`
   margin-left: 10px;
   margin-right: 10px;
   box-shadow: 2px 2px rgba(250,250,250,.040)
-  border-radius: 6;
+  border-radius: 6px;
 `;
 
 export const Tipo = styled.View`

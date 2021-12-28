@@ -22,7 +22,7 @@ export default function Profile() {
       <MaintoAction>
         <NewLink>
           <NewLinkButton onPress={() => navigation.navigate('Registrar')}>
-            <NewText>Registrar</NewText>
+            <NewText>Novas transações</NewText>
           </NewLinkButton>
         </NewLink>
 

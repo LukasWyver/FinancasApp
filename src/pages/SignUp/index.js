@@ -32,7 +32,7 @@ export default function SignUp() {
         <BackButton onPress={() => navigation.goBack()}>
           <Ionicons
             name="arrow-back-outline"
-            size={16}
+            size={20}
             color="rgba(198, 44, 54, 0.7)"
           />
           <BackText>Voltar</BackText>
