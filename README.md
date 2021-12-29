@@ -21,8 +21,23 @@ tecnologias utilizadas.
 
 ## Como utilizar: 
 
-* ![Logo of the project](https://watch.screencastify.com/v/WTV29DWazu14zDOHdD8r)
+### Tela de Cadastro:
+![tela de Cadastro](https://github.com/LukasWyver/FinancasApp/blob/master/src/assets/gifs/signUp-wallet-app.gif)
 
+### Tela de Login:
+![tela de Login](https://github.com/LukasWyver/FinancasApp/blob/master/src/assets/gifs/signIn-wallet-app.gif)
+
+### Tela para novas transações:
+![tela de new transaction](https://github.com/LukasWyver/FinancasApp/blob/master/src/assets/gifs/new-transaction-wallet-app.gif)
+
+### Tela Home selecionando datas:
+![tela de new transaction](https://github.com/LukasWyver/FinancasApp/blob/master/src/assets/gifs/date-picker-wallet-app.gif)
+
+### Tela Home excluindo transações:
+![tela de new transaction](https://github.com/LukasWyver/FinancasApp/blob/master/src/assets/gifs/delete-item-wallet-app.gif)
+ 
+        Só é possível excluir transações que sejam da mesma data atual(hoje).
+        
 ## 🚀 Começando o projeto:
 
 Clone o repositorio através do link:
@@ -47,7 +62,7 @@ $ npx react-native run-android
 
 ## Links
 
-  - Repository: https://https://github.com/LukasWyver/FinancasApp
+- Repository: https://https://github.com/LukasWyver/FinancasApp
 
 ## Versão
 
