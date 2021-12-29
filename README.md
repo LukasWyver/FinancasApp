@@ -1,4 +1,4 @@
-![Logo of the project](https://github.com/LukasWyver/FinancasApp/blob/master/src/assets/iwalletsmall.png)
+![Logo of the project](https://github.com/LukasWyver/FinancasApp/blob/master/src/assets/gifs/wallet-template-small.png)
 
 ## WalletApp
 
