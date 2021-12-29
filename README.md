@@ -7,19 +7,11 @@
 
 ## 🧪 Tecnologias
 
-tecnologias e libs utilizadas.
+tecnologias utilizadas.
 
-* React version 17.0.2
 * React Native version 0.66.4
 * Firebase version ^8.8.1
 * Styled Components version ^5.3.3
-* React Navigation version 5.x
-* React Navigation Bottom Tabs version 6.0.9
-* React Navigation Stack version 5.14.9
-* React Native Linear Gradient version ^2.5.6
-* React Native Async Storage version ^1.15.14   
-* React Native Status Bar Height version ^2.6.0
-* React Native Vector Icons version ^9.0.0"
     
 
 ## Serviços utilizados:
