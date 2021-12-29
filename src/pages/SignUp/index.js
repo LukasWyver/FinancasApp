@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import {Platform} from 'react-native';
+import {Platform, ActivityIndicator} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {AuthContext} from '../../contexts/auth';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -20,7 +20,7 @@ export default function SignUp() {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const {signUp} = useContext(AuthContext);
+  const {signUp, loadingAuth} = useContext(AuthContext);
 
   function handleSignUp() {
     signUp(email, password, nome);
@@ -65,11 +65,16 @@ export default function SignUp() {
             autoCapitalize="none"
             value={password}
             onChangeText={text => setPassword(text)}
+            secureTextEntry={true}
           />
         </AreaInput>
         <AreaButton>
           <SubmitButton onPress={handleSignUp}>
-            <SubmitText>Cadastrar</SubmitText>
+            {loadingAuth ? (
+              <ActivityIndicator size={26} color="#131313" />
+            ) : (
+              <SubmitText>Cadastrar</SubmitText>
+            )}
           </SubmitButton>
         </AreaButton>
       </Container>

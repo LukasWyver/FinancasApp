@@ -23,8 +23,8 @@ export const Input = styled.TextInput.attrs({
 export const Title = styled.Text`
   text-align: left;
   margin-left: 6px;
-  margin-bottom: 15px;
-  color: 'rgba(255,255,255,0.40)';
+  margin-bottom: 2px;
+  color: 'rgba(255,255,255,0.25)';
 `;
 
 export const ButtonArea = styled(LinearGradient).attrs({

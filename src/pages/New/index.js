@@ -23,12 +23,10 @@ import Picker from '../../components/Picker';
 export default function New() {
   const navigation = useNavigation();
   const [valor, setValor] = useState('');
-  const [tipo, setTipo] = useState('selecione o tipo');
+  const [tipo, setTipo] = useState('receita');
   const {user: usuario} = useContext(AuthContext); //renomeei meu user para 'usuario'
 
   function handleSubmit() {
-    //alert(`valor selecinado:R$ ${valor}\ntipo selecionado: ${tipo}`)
-
     Keyboard.dismiss();
 
     if (isNaN(parseFloat(valor)) || tipo === null) {
@@ -65,7 +63,7 @@ export default function New() {
       .set({
         tipo: tipo,
         valor: parseFloat(valor),
-        date: format(new Date(), 'dd/MM/yy'),
+        date: format(new Date(), 'dd/MM/yyyy'),
       });
 
     //atualizar o saldo do usuario.
@@ -95,11 +93,11 @@ export default function New() {
             onChangeText={value => setValor(value)}
           />
 
-          <Picker onChange={setTipo} tipo={tipo} />
-
           <View style={{width: '90%'}}>
             <Title>selecione o tipo: "ex: despesa"</Title>
           </View>
+
+          <Picker onChange={setTipo} tipo={tipo} />
 
           <ButtonArea>
             <ButtonTouch onPress={handleSubmit}>

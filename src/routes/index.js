@@ -9,8 +9,14 @@ function Routes() {
   const {signed, loading} = useContext(AuthContext);
 
   if (loading) {
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <ActivityIndicator size="large" color="#131313" />
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#131313',
+      }}>
+      <ActivityIndicator size="large" color="#00b94a" />
     </View>;
   }
 
