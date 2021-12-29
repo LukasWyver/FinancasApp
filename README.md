@@ -19,6 +19,10 @@ tecnologias utilizadas.
 * Github
 * Firebase
 
+## Como utilizar: 
+
+* em breve.
+
 ## 🚀 Começando o projeto:
 
 Clone o repositorio através do link:
