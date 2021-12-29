@@ -8,12 +8,14 @@ export const Container = styled.View`
   margin-right: 10px;
   box-shadow: 2px 2px rgba(250,250,250,.040)
   border-radius: 6px;
+  
 `;
 
 export const Tipo = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 6px;
 `;
 
 // export const IconView = styled.View.attrs({
@@ -46,3 +48,5 @@ export const ValorText = styled.Text`
   font-size: 20px;
   font-weight: bold;
 `;
+
+export const IconDelete = styled.TouchableOpacity``;

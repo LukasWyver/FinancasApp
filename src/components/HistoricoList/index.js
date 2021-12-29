@@ -1,8 +1,17 @@
 import React from 'react';
 import {StyleSheet, TouchableWithoutFeedback} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import LinearGradient from 'react-native-linear-gradient';
-import {Container, Tipo, Date, IconView, TipoText, ValorText} from './styles';
+import {
+  Container,
+  Tipo,
+  Date,
+  IconView,
+  IconDelete,
+  TipoText,
+  ValorText,
+} from './styles';
 
 export default function HistoricoList({data, deleteItem}) {
   return (
@@ -34,7 +43,16 @@ export default function HistoricoList({data, deleteItem}) {
           <Date>{data.date}</Date>
           {/* </IconView> */}
         </Tipo>
-        <ValorText>R$ {data.valor}</ValorText>
+        <Tipo>
+          <ValorText>R$ {data.valor}</ValorText>
+          <IconDelete onPress={() => deleteItem(data)}>
+            <Icon
+              name="delete-outline"
+              color="rgba(250, 250, 250, 0.2)"
+              size={20}
+            />
+          </IconDelete>
+        </Tipo>
       </Container>
     </TouchableWithoutFeedback>
   );
