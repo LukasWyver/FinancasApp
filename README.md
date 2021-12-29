@@ -21,7 +21,7 @@ tecnologias utilizadas.
 
 ## Como utilizar: 
 
-* em breve.
+* ![Logo of the project](https://watch.screencastify.com/v/WTV29DWazu14zDOHdD8r)
 
 ## 🚀 Começando o projeto:
 
