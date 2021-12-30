@@ -131,7 +131,6 @@ export default function Home() {
   const onChange = date => {
     setShow(Platform.OS === 'ios');
     setNewDate(date);
-    console.log(date);
   };
   return (
     <Background>
